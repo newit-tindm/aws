@@ -1,13 +1,4 @@
-var AWS = require('aws-sdk');
-
-var fs = require('fs');
-
-var s3 = new AWS.S3({
-   endpoint: 'http://localhost:4566',
-   s3ForcePathStyle: true,
-   accessKeyId: 'dev',
-   secretAccessKey: 'dev'
-});
+var { s3, fs } = require('./s3')
 
 var params = {
    Bucket: 's3-bucket-sample-1',

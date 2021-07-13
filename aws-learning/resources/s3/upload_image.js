@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const uploadFile = require('./s3_upload_file')
+const uploadFile = require('./upload_config')
 
 const testUpload = () => {
    const filePath = path.resolve(__dirname, 'test-image.png')

@@ -1,11 +1,4 @@
-var AWS = require('aws-sdk');
-
-var s3 = new AWS.S3({
-   endpoint: 'http://localhost:4566',
-   s3ForcePathStyle: true,
-   accessKeyId: 'dev',
-   secretAccessKey: 'dev'
-});
+var { s3 } = require('./s3')
 
 const uploadFile = async (data, fileName) => {
    new Promise((resolve) => {
