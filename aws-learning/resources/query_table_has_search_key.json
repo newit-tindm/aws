@@ -1,0 +1,56 @@
+{
+  "Items": [
+    {
+      "hash_key": "hash_7",
+      "range_key": 1,
+      "value": 71
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 2,
+      "value": 72
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 3,
+      "value": 73
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 4,
+      "value": 74
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 5,
+      "value": 75
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 6,
+      "value": 76
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 7,
+      "value": 77
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 8,
+      "value": 78
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 9,
+      "value": 79
+    },
+    {
+      "hash_key": "hash_7",
+      "range_key": 10,
+      "value": 710
+    }
+  ],
+  "Count": 10,
+  "ScannedCount": 10
+}

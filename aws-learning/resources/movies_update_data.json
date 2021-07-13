@@ -1,0 +1,13 @@
+{
+  "Attributes": {
+    "info": {
+      "rating": 5.5,
+      "actors": [
+        "Larry",
+        "Moe",
+        "Curly"
+      ],
+      "plot": "Everything happens all at once."
+    }
+  }
+}
