@@ -1,6 +1,8 @@
 // Load the AWS SDK for Node.js
 var AWS = require('aws-sdk');
 
+var fs = require('fs');
+
 // Set config 
 AWS.config.update({
     region: 'ap-northeast-1',
@@ -15,5 +17,5 @@ var dynamodb = new AWS.DynamoDB();
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 module.exports = {
-    dynamodb, docClient
+    dynamodb, docClient, fs
 }
