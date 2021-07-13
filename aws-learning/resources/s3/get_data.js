@@ -1,4 +1,4 @@
-var { s3, fs } = require('./s3')
+var { s3, fs } = require('./s3');
 
 var params = {
    Bucket: 's3-bucket-sample-1',
