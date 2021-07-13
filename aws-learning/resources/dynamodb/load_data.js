@@ -2,6 +2,7 @@ var { docClient, fs } = require('./aws');
 
 console.log('Importing Movies into DynamoDB. Please wait.');
 
+// get data from file json
 var allMovies = JSON.parse(fs.readFileSync('movie_data.json', 'utf8'));
 
 allMovies.forEach(function(movie) {
