@@ -9,6 +9,8 @@ var s3 = new AWS.S3({
    secretAccessKey: 'dev'
 });
 
+const DEFAULT_BUCKET_NAME = 's3-bucket-sample';
+
 module.exports = {
-    s3, fs
+    s3, fs, DEFAULT_BUCKET_NAME
 }

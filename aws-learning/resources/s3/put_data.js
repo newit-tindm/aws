@@ -1,7 +1,7 @@
-var { s3 } = require('./s3');
+var { s3, DEFAULT_BUCKET_NAME } = require('./s3');
 
 var params = {
-    Bucket: 's3-bucket-sample-1',
+    Bucket: DEFAULT_BUCKET_NAME,
     Key: 'test-image.png'
 };
 

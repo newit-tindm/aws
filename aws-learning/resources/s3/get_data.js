@@ -1,7 +1,7 @@
-var { s3, fs } = require('./s3');
+var { s3, fs, DEFAULT_BUCKET_NAME } = require('./s3');
 
 var params = {
-   Bucket: 's3-bucket-sample-1',
+   Bucket: DEFAULT_BUCKET_NAME,
    Key: 'json-data.json',
    Range: 'bytes=0-9' // get 10 item 
 };

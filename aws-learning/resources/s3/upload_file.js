@@ -1,4 +1,4 @@
-var { s3, fs } = require('./s3');
+var { s3, fs, DEFAULT_BUCKET_NAME } = require('./s3');
 
 var path = require('path');
 
@@ -8,7 +8,7 @@ const fileStream = fs.createReadStream(file);
 
 s3.upload(
    {
-      Bucket: 's3-bucket-sample-1',
+      Bucket: DEFAULT_BUCKET_NAME,
       Key: path.basename(file),
       Body: fileStream
    },
