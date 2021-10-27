@@ -7,7 +7,8 @@ aws --endpoint-url=http://localhost:4569 --region=$AWS_REGION dynamodb create-ta
 aws --endpoint-url=http://localhost:4569 --region=$AWS_REGION dynamodb create-table --table-name TableNotHasSearchKey1 --attribute-definitions AttributeName=hash_key,AttributeType=S --key-schema AttributeName=hash_key,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 
 
-aws --endpoint-url=http://localhost:4566 s3 mb s3://s3-bucket-sample-1
+aws --endpoint-url=http://localhost:4566 s3 mb s3://odawara-local
 
-aws --endpoint-url=http://localhost:4566 s3 cp ./json-data.json s3://s3-bucket-sample/json-data.json
+aws --endpoint-url=http://localhost:4566 s3 cp ./json-data.json s3://odawara-local/json-data.json
 
+aws --endpoint-url=http://localhost:4566 s3api put-bucket-versioning --bucket odawara-local --versioning-configuration Status=Enabled

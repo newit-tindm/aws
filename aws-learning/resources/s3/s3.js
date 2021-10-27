@@ -9,7 +9,7 @@ var s3 = new AWS.S3({
    secretAccessKey: 'dev'
 });
 
-const DEFAULT_BUCKET_NAME = 's3-bucket-sample';
+const DEFAULT_BUCKET_NAME = 'odawara-local';
 
 module.exports = {
     s3, fs, DEFAULT_BUCKET_NAME
