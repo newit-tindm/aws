@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2021-11-18T09:13:31.014Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" version="15.8.2" etag="xcbWoiA8a8qea8zZ9rF4" type="github"><diagram id="4HKZma3D7JSOj2orrfjP">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-18T09:34:28.740Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="E7nUgul0tbwTapyls0eS" version="15.8.2" type="github">
+  <diagram id="4HKZma3D7JSOj2orrfjP" name="Page-1">
+    <mxGraphModel dx="1902" dy="1050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-1" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Collect items tool&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="324" y="50" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-2" value="&lt;font style=&quot;font-size: 14px&quot;&gt;Item ids&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="205" width="660" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;fontColor=#000000;" edge="1" parent="1" source="CtUeDrjdaO4ztGRpP8B1-5" target="CtUeDrjdaO4ztGRpP8B1-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-5" value="&lt;font style=&quot;font-size: 14px&quot; color=&quot;#000000&quot;&gt;Colect items&lt;/font&gt;" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#B5B5B5;align=center;strokeColor=#4D4D4D;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="80" y="790" width="105.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-7" value="&lt;span style=&quot;color: rgb(23 , 43 , 77) ; font-family: , &amp;#34;blinkmacsystemfont&amp;#34; , &amp;#34;segoe ui&amp;#34; , &amp;#34;roboto&amp;#34; , &amp;#34;noto sans&amp;#34; , &amp;#34;ubuntu&amp;#34; , &amp;#34;droid sans&amp;#34; , &amp;#34;helvetica neue&amp;#34; , sans-serif ; font-size: 16px ; letter-spacing: -0.08px ; text-align: left ; background-color: rgb(255 , 255 , 255)&quot;&gt;Data is collecting, result will be sent into slack channel. Do not hit &lt;/span&gt;&lt;code class=&quot;code css-9z42f9&quot; style=&quot;font-family: , &amp;#34;sf mono&amp;#34; , &amp;#34;segoe ui mono&amp;#34; , &amp;#34;roboto mono&amp;#34; , &amp;#34;ubuntu mono&amp;#34; , &amp;#34;menlo&amp;#34; , &amp;#34;consolas&amp;#34; , &amp;#34;courier&amp;#34; , monospace ; font-size: 0.875em ; color: rgb(23 , 43 , 77) ; border-style: none ; border-radius: 3px ; display: inline ; padding: 2px 0.5ch ; overflow-wrap: break-word ; overflow: auto ; letter-spacing: -0.08px ; text-align: left&quot;&gt;Collect button&lt;/code&gt;&lt;span style=&quot;color: rgb(23 , 43 , 77) ; font-family: , &amp;#34;blinkmacsystemfont&amp;#34; , &amp;#34;segoe ui&amp;#34; , &amp;#34;roboto&amp;#34; , &amp;#34;noto sans&amp;#34; , &amp;#34;ubuntu&amp;#34; , &amp;#34;droid sans&amp;#34; , &amp;#34;helvetica neue&amp;#34; , sans-serif ; font-size: 16px ; letter-spacing: -0.08px ; text-align: left ; background-color: rgb(255 , 255 , 255)&quot;&gt; again. Please wait~&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;dashed=0;fontSize=10;fontColor=#ffffff;strokeColor=#4D4D4D;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="230" y="300" width="410" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-9" value="&lt;font style=&quot;font-size: 14px&quot;&gt;show dialog message&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontColor=#1A1A1A;" vertex="1" parent="1">
+          <mxGeometry x="264" y="800" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-10" value="&lt;font style=&quot;font-size: 14px&quot;&gt;OK&lt;/font&gt;" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#E6E6E6;align=center;strokeColor=#E6E6E6;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="394" y="410" width="82" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CtUeDrjdaO4ztGRpP8B1-12" value="&amp;nbsp; User name" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontColor=#1A1A1A;fillColor=#FFFFFF;align=left;" vertex="1" parent="1">
+          <mxGeometry x="80" y="90" width="660" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
