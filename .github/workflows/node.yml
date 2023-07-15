@@ -1,0 +1,36 @@
+name: Test CI
+on:
+  pull_request:
+    paths:
+      - node-unit-test/**
+      - .github/workflows/node.yml
+jobs:
+  shopee-platform:
+    runs-on: ubuntu-20.04
+    env:
+      cwd: sync-service/shopee-platform
+      cache-version: v3
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+      - name: cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: ${{env.cwd}}/node_modules
+          key: ${{ env.cache-version }}-${{ runner.os }}-node_modules-${{ hashFiles(format('{0}/{1}', env.cwd, 'package-lock.json')) }}
+      - name: cache npm files
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ env.cache-version }}-${{ runner.os }}-npm-${{ hashFiles(format('{0}/{1}', env.cwd, 'package-lock.json')) }}
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: install dependencies
+        run: npm install
+        working-directory: ${{env.cwd}}
+      - name: test
+        run: npm run test
+        working-directory: ${{env.cwd}}
