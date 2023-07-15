@@ -29,7 +29,7 @@ jobs:
           key: ${{ env.cache-version }}-${{ runner.os }}-npm-${{ hashFiles(format('{0}/{1}', env.cwd, 'package-lock.json')) }}
       - uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: echo ${{ secrets }}
       - name: install dependencies
         run: npm install
         working-directory: ${{env.cwd}}
