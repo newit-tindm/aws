@@ -1,14 +1,16 @@
 name: Test CI
 on:
+  push:
+    branches: [ main ]
   pull_request:
     paths:
       - node-unit-test/**
       - .github/workflows/node.yml
 jobs:
-  shopee-platform:
+  node-unit-test:
     runs-on: ubuntu-20.04
     env:
-      cwd: sync-service/shopee-platform
+      cwd: node-unit-test
       cache-version: v3
     steps:
       - uses: actions/checkout@v3
