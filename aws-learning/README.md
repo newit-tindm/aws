@@ -45,6 +45,12 @@ Try:
   - Upload file to `s3-bucket-sample` with name `table-data.csv` ( see sample files in resources )
 
 ## Test with sam
+cd aws-learning
+
 ```run command
+docker compose up -d
+
 sam build
+
+node example/test/local.js
 ```
