@@ -43,3 +43,8 @@ Try:
   - Writing code to read data from this file
   - Convert json to csv file ( use library `json2csv` )
   - Upload file to `s3-bucket-sample` with name `table-data.csv` ( see sample files in resources )
+
+## Test with sam
+```run command
+sam build
+```

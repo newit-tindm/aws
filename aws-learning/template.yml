@@ -1,0 +1,81 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  example-sam
+
+  Sample SAM Template for example-sam
+
+Parameters:
+  Stage:
+    Type: String
+    AllowedValues:
+      - staging
+
+Mappings:
+  Configs:
+    staging:
+      SecurityGroupId: sg-123
+      SubnetId: subnet-123
+      SecretId: example-sam/staging
+      SourceVpce:
+        - vpce-123
+        - vpce-123
+      ShopInfoBucket: example-staging
+      ShopInfoKey: shop-desc-base/example-base-shop.yaml
+      ExampleTable: ExampleCache
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+    VpcConfig:
+      SecurityGroupIds:
+        - !FindInMap [Configs, !Ref Stage, SecurityGroupId]
+      SubnetIds:
+        - !FindInMap [Configs, !Ref Stage, SubnetId]
+    Environment:
+      Variables:
+        RELEASE_STAGE: !Ref Stage
+        SECRET_ID: !FindInMap [Configs, !Ref Stage, SecretId]
+        SHOP_INFO_BUCKET: !FindInMap [Configs, !Ref Stage, ShopInfoBucket]
+        SHOP_INFO_KEY: !FindInMap [Configs, !Ref Stage, ShopInfoKey]
+        EXAMPLE_TABLE: !FindInMap [ Configs, !Ref Stage, ExampleTable ]
+  Api:
+    EndpointConfiguration: PRIVATE
+
+Resources:
+  ExamFunction:
+    Type: "AWS::Serverless::Function" # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      FunctionName: Example
+      CodeUri: example/
+      Handler: app.handler
+      Runtime: nodejs16.x
+      Timeout: 900
+      MemorySize: 256
+      Policies:
+        - AWSLambdaVPCAccessExecutionRole
+        - SecretsManagerReadWrite
+        - S3ReadPolicy:
+            BucketName: !FindInMap [Configs, !Ref Stage, ShopInfoBucket]
+        - DynamoDBCrudPolicy:
+            TableName: !FindInMap [ Configs, !Ref Stage, ExampleTable ]
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Target: "es2020"
+        # External:
+          # - chai
+        EntryPoints:
+          - app.js
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  ExampleFunction:
+    Description: ExampleFunction Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+        - ExampleFunction
+        - Arn
